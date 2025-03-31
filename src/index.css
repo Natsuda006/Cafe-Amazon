@@ -1,0 +1,235 @@
+/* นำเข้า font */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: #F4F1E7;
+  background-image: url('https://img.pikbest.com/backgrounds/20190410/summer-juice-cool-drink-drawing-minimalist-yellow-background_1819945.jpg!sw800'); /* เพิ่มพื้นหลัง */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #212220;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: #199153;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  display: inline;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #FFC107;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background: #014421;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1024px;
+  margin: 80px auto 20px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #0e0f0e;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Grid Layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card button {
+  background: #FFC107;
+  color: #0c0c0c;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.card button:hover {
+  background: #FFB300;
+}
+
+/* Menu Container */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Menu Card */
+.menu-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%; /* ทำให้ภาพเป็นวงกลม */
+  background-color: #ddd;
+}
+
+.menu-info {
+  margin-top: 10px;
+}
+
+.add-to-cart-btn {
+  background: #014421;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: #FFC107;
+  color: #014421;
+}
+
+.cart-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 520px;
+  background: #F4F1E7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #014421;
+  margin-bottom: 10px;
+}
