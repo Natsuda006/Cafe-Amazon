@@ -1,8 +1,9 @@
-type CartItem = {
+interface CartItem {
   name: string;
   price: number;
   quantity: number;
-};
+}
+
 
 type CartProps = {
   cart: CartItem[];

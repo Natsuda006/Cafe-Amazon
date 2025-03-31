@@ -9,12 +9,7 @@ body {
   padding: 0;
 }
 
-img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover; /* ทำให้ภาพไม่เสียสัดส่วน */
-  border-radius: 50%;
-}
+
 
 /* Navbar */
 .navbar {

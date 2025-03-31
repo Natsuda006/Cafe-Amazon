@@ -58,11 +58,16 @@ const menuItems = [
   { category: "สินค้าพรีเมียม", name: "แก้วเปลี่ยนสี ลาย Limited “Thailand”", price: 189, imageSrc: LimitedIMG },
 ];
 
+interface CartItem {
+  name: string;
+  price: number;
+  quantity: number;
+}
 
 export default function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<CartItem[]>([]);
 
-  const addToCart = (name, price) => {
+  const addToCart = (name: string, price: number) => {
     const existingIndex = cart.findIndex(item => item.name === name);
     if (existingIndex !== -1) {
       const newCart = [...cart];
@@ -72,8 +77,8 @@ export default function App() {
       setCart([...cart, { name, price, quantity: 1 }]);
     }
   };
-
-  const updateQuantity = (index, newQuantity) => {
+  
+  const updateQuantity = (index: number, newQuantity: number) => {
     if (newQuantity < 1) {
       removeFromCart(index);
       return;
@@ -82,11 +87,11 @@ export default function App() {
     newCart[index].quantity = newQuantity;
     setCart(newCart);
   };
-
-  const removeFromCart = (index) => {
+  
+  const removeFromCart = (index: number) => {
     setCart(cart.filter((_, i) => i !== index));
   };
-
+  
   const categories = Array.from(new Set(menuItems.map(item => item.category)));
 
   return (

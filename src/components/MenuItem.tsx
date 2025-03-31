@@ -1,9 +1,9 @@
-type MenuItemProps = {
-    name: string;
-    price: number;
-    imageSrc: string;
-    addToCart: () => void;
-  };
+interface MenuItemProps {
+  name: string;
+  price: number;
+  imageSrc: string;
+  addToCart: () => void;
+}
   
   export default function MenuItem({ name, price, imageSrc, addToCart }: MenuItemProps) {
     return (
