@@ -1,9 +1,10 @@
 {
-  "name": "mini-taiyaki",
+  "name": "Cafe-Amazon",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://PhithLoveSandwich.github.io/ReactTaiyaki/",
+  "homepage": "https://https://Natsuda006.github.io/Cafe-Amazon/",
+
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
